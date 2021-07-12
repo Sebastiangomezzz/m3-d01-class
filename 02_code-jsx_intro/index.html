@@ -24,14 +24,22 @@
     <title>React Intro</title>
   </head>
   <body>
+
+    <h1>This is the h1 in body that React cannot touch</h1>
     <!-- root element where we want to inject the React app -->
+<<<<<<< HEAD
      <div id="root">  <!--you can use app or root or whatever-->
     <!-- We will limit react to manipulate DOM inside this div -->
 
+=======
+    <div id="root">
+      <!-- We will limit React to ONLY manipulate DOM inside this tag -->
+>>>>>>> 77c9e4eaa3d67d1ecc4007a01f3971e53c5978a5
     </div>
 
     <script type="text/babel">
 
+<<<<<<< HEAD
     function JSXExample() {
 
       return (
@@ -40,11 +48,42 @@
           <h3>React Intro</h3>
         </div>
       );
+=======
+    function Greet(props) {
+      {/* props is ONE big object that contains all your funciton arguments as properties of the object */}
+      {/* props = { 
+        personName: '',
+        cityName: ''
+      } */}
+
+      return <p> My name is { props.personName } and I live in { props.cityName }</p>
+    }
+
+    function AppTitle() {
+      return <h1 className="App">Hello Ironhackers</h1>
+
+    }
+
+    const name1 = 'Marco'
+    const name2 = 'Fede'
+    function App() {
+      return (
+        <div>
+          <AppTitle />
+          <Greet personName={name1} cityName='Barcelona' />
+          <Greet personName={name2} />
+        </div>
+        )
+>>>>>>> 77c9e4eaa3d67d1ecc4007a01f3971e53c5978a5
     }
 
       // ReactDOM.render injects all of the React app code into the DOM
       ReactDOM.render(<JSXExample/>, document.getElementById("root"));//append the script to the div with this id
     </script>
+<<<<<<< HEAD
       <!-- lines 28 and 45 have to have the same name between quotes -->
+=======
+
+>>>>>>> 77c9e4eaa3d67d1ecc4007a01f3971e53c5978a5
   </body>
 </html>
